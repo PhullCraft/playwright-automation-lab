@@ -48,6 +48,10 @@ export default defineConfig({
       name: 'webkit',
       use: { ...devices['Desktop Safari'] },
     },
+    {
+    name: 'api',
+    testDir: './tests/api',
+    },
 
     /* Test against mobile viewports. */
     // {
