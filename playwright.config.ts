@@ -1,5 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
+import { defineBddConfig } from 'playwright-bdd';
 
+const bddTestDir = defineBddConfig({
+  paths: ['features/*.feature'],
+  require: ['steps/**/*.ts'],
+  importTestFrom: 'fixtures/pageFixtures.ts',
+});
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
@@ -52,6 +58,7 @@ export default defineConfig({
     name: 'api',
     testDir: './tests/api',
     },
+    { name: 'bdd', testDir: bddTestDir },
 
     /* Test against mobile viewports. */
     // {
