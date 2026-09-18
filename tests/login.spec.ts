@@ -4,7 +4,7 @@ import { test, expect } from '../fixtures/pageFixtures';
 import users from '../test-data/users.json';
 import loginScenarios from '../test-data/loginScenarios.json';
 
-test('user can login with valid credentials', async ({ page, loginPage }) => {
+test('user can login with valid credentials @smoke', async ({ page, loginPage }) => {
     // const loginPage = new LoginPage(page);  // ← REMOVED: fixture creates this automatically now
 
     await page.goto('https://www.saucedemo.com/');

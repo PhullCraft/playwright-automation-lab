@@ -4,7 +4,7 @@ import products from '../test-data/products.json';
 import { InventoryPage } from '../pages/InventoryPage';
 import { HeaderComponent } from '../pages/components/HeaderComponent';
 
-test('user can add multiple products to cart', async ({ page, loginPage }) => {
+test('user can add multiple products to cart @regression', async ({ page, loginPage }) => {
     await page.goto('https://www.saucedemo.com/');
     await loginPage.login(users.standardUser.username, users.standardUser.password);
 

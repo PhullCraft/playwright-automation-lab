@@ -27,3 +27,11 @@ for(const row of seats){
     }
 
 }
+
+
+function secondHighestNumber(arr: number[]){
+    
+
+
+
+};
